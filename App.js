@@ -1,10 +1,23 @@
-const express = require('express');
-const app = express();
+const express    = require('express'),
+      bodyParser = require("body-parser"),
+      app        = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+// require routers
+const indexRoute = require("./routers/index");
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+const port = 3000;
+
+// configure packages
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
+//-------------------------------
+//            Routes
+//-------------------------------
+app.use(indexRoute);
+
+// local listener
+app.listen(port, () => {
+  console.log(`Alsana app listening at http://localhost:${port}`);
+})
