@@ -10,16 +10,6 @@ router.get("/", (req,res) => {
     res.render('home', { lang: langAR, projects: data });
 });
 
-// home lang route
-router.get("/:lang", (req,res) => {
-    const data = projects('en');
-    if(req.params.lang === "en"){
-        return res.render('home', { lang: langEN, projects: data });
-    }else{
-        return res.redirect("/");
-    }
-});
-
 // project route
 router.get("/project/:id/:lang", (req, res) => {
     const projectId = req.params.id;
@@ -35,6 +25,27 @@ router.get("/project/:id/:lang", (req, res) => {
         return res.render('project', { lang: langEN, currentProject });
     }else{
         return res.render('project', { lang: langAR, currentProject });
+    }
+});
+// contact us route
+router.get("/contact", (req,res) => {
+    res.render('contact', { lang: langAR });
+});
+router.get('/contact/:lang', ( req, res ) => {
+    if(req.params.lang === "en"){
+        return res.render('contact', { lang: langEN });
+    }else{
+        return res.render('contact', { lang: langAR });
+    }
+});
+
+// home lang route
+router.get("/:lang", (req,res) => {
+    const data = projects('en');
+    if(req.params.lang === "en"){
+        return res.render('home', { lang: langEN, projects: data });
+    }else{
+        return res.redirect("/");
     }
 });
 module.exports = router;
