@@ -5,7 +5,7 @@ const express    = require('express'),
 // require routers
 const indexRoute = require("./routers/index");
 
-const port = 3000;
+const port = proccess.env.PORT || 3000;
 
 // configure packages
 app.use(bodyParser.urlencoded({ extended: true }));
