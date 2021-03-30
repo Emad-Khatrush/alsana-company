@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV !== "production"){
+  require("dotenv").config();
+}
+
 const express    = require('express'),
       bodyParser = require("body-parser"),
       app        = express();
@@ -5,7 +9,7 @@ const express    = require('express'),
 // require routers
 const indexRoute = require("./routers/index");
 
-const port = proccess.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // configure packages
 app.use(bodyParser.urlencoded({ extended: true }));
