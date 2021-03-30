@@ -17,6 +17,10 @@ app.set("view engine", "ejs");
 //-------------------------------
 app.use(indexRoute);
 
+app.get("*", (req ,res) => {
+  res.redirect("/");
+});
+
 // local listener
 app.listen(port, () => {
   console.log(`Alsana app listening at http://localhost:${port}`);

@@ -57,7 +57,9 @@
 /* ==============================
    2 Global styles
    ============================== */
-
+   html {
+    scroll-behavior: smooth;
+  }
 .clearfix {
     clear: both;
 }
@@ -79,7 +81,7 @@ li {
 .btn {
     background: #4dcef6;
     color: #fff;
-    font-size: 16px;
+    font-size: 23px;
     font-weight: bold;
     padding: 0 40px;
     line-height: 48px;
@@ -6638,7 +6640,7 @@ blockquote footer a {
 /*=======home banner_variation2 style start=======*/
 
 h1.bnrfnt50 {
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Raleway', sans-serif;
     color: #fff;
     font-weight: 800;

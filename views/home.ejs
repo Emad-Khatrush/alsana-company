@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- reponsive meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <script src="https://kit.fontawesome.com/4163cc19b6.js" crossorigin="anonymous"></script>
+    <title><%= lang.homePage.home %></title>
     <!-- Bootstrap-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- animate css-->
@@ -28,6 +27,7 @@
     script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
+    <script src="https://kit.fontawesome.com/4163cc19b6.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Top Navigation-->
@@ -49,11 +49,12 @@
                   <div class="nav-t-footer">
                     <ul class="nav">
                       <li class=" active">
-                          <a href="#">Home</a>
+                          <a href="/<%= lang.currentLang %> "> <%= lang.homePage.home %> </a>
                       </li>
                       
-                      <li class=""><a href="projects.html">Projects</a></li>
-                      <li><a href="contact.html">contact us</a></li>
+                      <li class=""><a href="#projects"><%= lang.homePage.projects %></a></li>
+                      <li><a href="/contact/<%= lang.currentLang %>"><%= lang.homePage.contactUs %></a></li>
+                      <a></a>
                     </ul>
                   </div>
                 </div>
@@ -67,23 +68,26 @@
       <div id="minimal-bootstrap-carousel" data-ride="carousel" class="carousel slide carousel-fade shop-slider full_width ver_new_4_slider">
         <!-- Wrapper for slides-->
         <div role="listbox" class="carousel-inner">
-          <div style="background-image: url(https://images.unsplash.com/photo-1503708928676-1cb796a0891e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);" class="item active">
+          <div style="background-image: url(images/slider/homepage4/4-2.jpg);" class="item active">
             <div class="carousel-caption">
               <div class="thm-container txt-left">
                 <div class="box valign-bottom">
-                  <div class="content text-left"><img data-animation="animated fadeInDown" src="images/home_page_variation4/title-1.png" alt="">
-                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50">professional & <br>certified <span class="color3">technicians</span></h1><a data-animation="animated fadeInUp" href="about_us.html" class="view-all hvr-bounce-to-right slide_learn_btn btn">our sevices</a>
+                  <div class="content text-left">
+                    <p data-animation="animated fadeInDown" style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.alsanaSuccess %> </p>
+                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50"> <%= lang.homePage.technicians %> <%= lang.homePage.professional %> <span class="color3"><%= lang.homePage.certified %></span></h1>
+                    <a data-animation="animated fadeInUp" href="#services" class="view-all hvr-bounce-to-right slide_learn_btn btn"><%= lang.homePage.ourServices %></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div style="background-image: url(images/slider/homepage4/4-2.jpg);" class="item">
+          <div style="background-image: url(assets/img/home1.jpg);" class="item">
             <div class="carousel-caption">
               <div class="thm-container">
                 <div class="box valign-bottom">
-                  <div class="content text-center"><img data-animation="animated fadeInDown" src="images/home_page_variation4/title-2.png" alt="">
-                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50">Leader in power and<br>automation <span class="color3">technology</span></h1>
+                  <div class="content text-center">
+                    <p data-animation="animated fadeInDown" style="font-size: 3rem; font-weight: bold;"><%= lang.homePage.alsanaSuccess %> </p>
+                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50"> <%= lang.homePage.leader %> <br><%= lang.homePage.manufacturing %> <span class="color3"><%= lang.homePage.buildings %></span></h1>
                   </div>
                 </div>
               </div>
@@ -93,8 +97,9 @@
             <div class="carousel-caption">
               <div class="thm-container">
                 <div class="box valign-bottom">
-                  <div class="content text-center"><img data-animation="animated fadeInDown" src="images/home_page_variation4/title-1.png" alt="">
-                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50">quality structural<br>steel projects   <span class="color3">industry</span></h1>
+                  <div class="content text-center">
+                    <p data-animation="animated fadeInDown" style="font-size: 3rem; font-weight: bold;"><%= lang.homePage.alsanaSuccess %> </p>
+                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50"><%= lang.homePage.projectsQuality %> <br> <span class="color3"><%= lang.homePage.hangers %></span> </h1>
                   </div>
                 </div>
               </div>
@@ -110,109 +115,96 @@
     <!-- =========top navigation end============-->
     <ul class="banner_btm_list">
       <li class="lytblue_prd_bg"><img src="images/home_page_variation4/icon-1.png" alt="">
-        <h4><a href="#">Expert certified engineers</a></h4>
-        <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.expertEngineers %> </h4>
+        <p style="font-size: 1.7rem;" ><%= lang.homePage.expertEngineersDesc %></p>
       </li>
       <li class="blue_prd_bg"><img src="images/home_page_variation4/icon-2.png" alt="">
-        <h4><a href="#">quality service</a></h4>
-        <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </li>
+        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.qualityservices %></h4>
+        <p style="font-size: 1.7rem;" ><%= lang.homePage.qualityservicesDesc %></p>      </li>
       <li class="yellow_prd_bg"><img src="images/home_page_variation4/icon-3.png" alt="">
-        <h4><a href="#">modern equipments</a></h4>
-        <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </li>
+        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.modernEquipments %></h4>
+        <p style="font-size: 1.7rem; color: white;" ><%= lang.homePage.modernEquipmentsDesc %></p>      </li>
     </ul>
     <!-- Control in compliance-->
     <section class="container ind-common-pad2 clearfix">
       <div class="quality-wrapper text-center">
         <div class="vision tab-panel fade in">
-          <h2>A hight level Quality Control in compliance with National and In International regulations and standards</h2>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
+          <h2><%= lang.homePage.qualityControlDesc %></h2>
         </div>
         <div class="values tab-panel fade hide">
-          <h2>A hight level Quality Control in compliance with National and In International regulations and standards</h2>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
+          <h2><%= lang.homePage.qualityControlDesc %></h2>
         </div>
         <div class="mission tab-panel fade hide">
-          <h2>A hight level Quality Control in compliance with National and In International regulations and standards</h2>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur.	
-          </p>
+          <h2><%= lang.homePage.qualityControlDesc %></h2>
         </div>
         <div class="vision-wrapper text-center">
           <ul>
             <li><a id="vision" href="javascript:void(0)"><img src="images/services/ser-icon4.png" alt="">
-                <p>Vision</p></a></li>
+                <p> <%= lang.homePage.qualityControl %>  </p></a></li>
             <li><a id="values" href="javascript:void(0)"><img src="images/services/ser-icon5.png" alt="">
-                <p>Values</p></a></li>
+                <p><%= lang.homePage.distinction %></p></a></li>
             <li><a id="mission" href="javascript:void(0)"><img src="images/services/ser-icon6.png" alt="">
-                <p>Mission</p></a></li>
+                <p><%= lang.homePage.missions %></p></a></li>
           </ul>
         </div>
       </div>
     </section>
     <!-- Control in compliance-->
     <!-- Team-->
-    <section class="team-wrapper team-wrapper4">
+    <section class="team-wrapper team-wrapper4" id="services">
       <div class="container clearfix">
         <div class="our-team-page">
           <div class="section_header2">
-            <h2>Our dedicated Team</h2>
+            <h2><%= lang.homePage.ourServices %></h2>
             <div class="decor-line"></div>
           </div>
           <div class="row event-pad">
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/hangars.jpg" alt="">
                 <div class="caption">
-                  <h2>mechanical engineering</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.hangersProduction %> </h2>
+                  <p><%= lang.homePage.hangerDesc %> </p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/portable-tankers.jpg" alt="">
                 <div class="caption">
-                  <h2>Agricultural Processing</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.saharij %></h2>
+                  <p><%= lang.homePage.saharijDesc %></p>
+                  <br>
                 </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/storage-tankers.jpg" alt="">
                 <div class="caption">
-                  <h2>Oils and Lubricants</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.saharij2 %></h2>
+                  <p style="font-size: 1.405rem;"><%= lang.homePage.saharij2Desc %></p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/containers.jpg" alt="">
                 <div class="caption">
-                  <h2>power and engery</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.campo %></h2>
+                  <p style="font-size: 1.35rem;"><%= lang.homePage.campoDesc %></p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/beds.jpg" alt="">
                 <div class="caption">
-                  <h2>chemical research</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.beds %></h2>
+                  <p><%= lang.homePage.bedsDesc %></p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 team">
               <div class="box-img"><img src="assets/img/cupboards.jpg" alt="">
                 <div class="caption">
-                  <h2>Meterial engineering</h2>
-                  <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+                  <h2><%= lang.homePage.dolap %></h2>
+                  <p><%= lang.homePage.dolapDesc %></p>
                 </div>
               </div>
             </div>
@@ -221,17 +213,17 @@
       </div>
     </section>
     <!-- Our Projects-->
-    <section class="our-galler-four clearfix">
+    <section class="our-galler-four clearfix" id="projects">
       <div class="container clearfix">
         <div class="section_header common">
-          <h2 class="white">Our Projects</h2>
+          <h2 class="white"><%= lang.homePage.ourProjects %></h2>
         </div>
       </div>
       <div class="fullwidth-silder3">
         <div class="fullwidth-slider3">
           <% projects.forEach(project => { %>
-              <div class="item project_img"><img src="<%= project.img %>" alt="">
-                <div class="project_txt_btn"><a href="/project/<%= project.id %>/<%= lang.currentLang %>" class="view-all desi-bounce-to-right slide_learn_btn view_project_btn">view project</a>
+              <div class="item project_img"><img src="<%= project.img[0] %>" alt="">
+                <div class="project_txt_btn"><a href="/project/<%= project.id %>/<%= lang.currentLang %>" class="view-all desi-bounce-to-right slide_learn_btn view_project_btn"><%= lang.homePage.viewProject %></a>
                   <h6> <%= project.title %> </h6>
                 </div>
               </div>
@@ -245,25 +237,32 @@
         <div class="row">
           <div class="col-lg-6 about-sec-content">
             <div class="section_header2 common">
-              <h2>About Us</h2>
+              <h2><%= lang.homePage.aboutUs %></h2>
             </div>
             <div class="row event-pad">
               <div class="col-md-6"><img src="images/about/4-1.jpg" alt=""></div>
               <div class="col-md-6"><img src="images/about/4-2.jpg" alt=""></div>
             </div>
-            <h4>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</h4>
-            <p>Tdolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam.</p>
+            <h4><%= lang.homePage.alsanaDesc %></h4>
+            <h4> <%= lang.homePage.alsanaDesc2 %></h4>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <ul>
-                  <li><i class="fa fa-arrow-circle-right"></i> Our Company Growth</li>
-                  <li><i class="fa fa-arrow-circle-right"></i> 1000 Employed</li>
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service3 %></li>
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service4 %></li>
                 </ul>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <ul>
-                  <li><i class="fa fa-arrow-circle-right"></i> Our Company Growth</li>
-                  <li><i class="fa fa-arrow-circle-right"></i> Customer Relationship</li>
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service5 %></li>
+                  
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service2 %></li>
+                </ul>
+              </div>
+              <div class="col-md-12">
+                <ul>
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service1 %></li>
+                  <li><i class="fa fa-arrow-circle-right"></i> <%= lang.homePage.service6 %></li>
                 </ul>
               </div>
             </div>
@@ -271,47 +270,37 @@
           <div class="col-lg-6">
             <div class="section-faq">
               <div class="section_header2 common">
-                <h2>Frequently Ask questions</h2>
+                <h2><%= lang.homePage.frequentlyAskedQuestions %></h2>
               </div>
               <div class="accordian-area accordian-area-pad">
                 <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
                   <div class="panel panel-default">
                     <div id="headingOne" role="tab" class="panel-heading">
-                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"><span>WE offer luxury service to our customer</span><i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
+                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"><span><%= lang.homePage.question1 %></span><i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
                     </div>
                     <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
                       <div class="panel-body faq-content">
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <p><%= lang.homePage.answer1 %></p>
                       </div>
                     </div>
                   </div>
                   <div class="panel panel-default">
                     <div id="headingTwo" role="tab" class="panel-heading">
-                      <h4 class="panel-title on"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">WE offer luxury service to our customer<i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
+                      <h4 class="panel-title on"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><%= lang.homePage.question2 %><i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
                     </div>
                     <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse in">
                       <div class="panel-body faq-content">
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <p><%= lang.homePage.answer2 %></p>
                       </div>
                     </div>
                   </div>
                   <div class="panel panel-default">
                     <div id="headingThree" role="tab" class="panel-heading">
-                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">WE offer luxury service to our customer<i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
+                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed"><%= lang.homePage.question3 %><i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
                     </div>
                     <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
                       <div class="panel-body faq-content">
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div id="headingFour" role="tab" class="panel-heading">
-                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">WE offer luxury service to our customer<i class="fa fa-minus"></i><i class="fa fa-plus"></i></a></h4>
-                    </div>
-                    <div id="collapseFour" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
-                      <div class="panel-body faq-content">
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <p><%= lang.homePage.answer3 %></p>
                       </div>
                     </div>
                   </div>
@@ -322,73 +311,38 @@
         </div>
       </div>
     </section>
-    
-    <!-- Indurial Solution-->
-    <section class="indurial-t-solution indurial-solution indpad anim-5-all indurial-t-solution3">
-      <div class="container clearfix">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="indurial-solution-text text-center">
-              <h2>If  You Need Any Industrial Solution ... We Are Available For You</h2><span class="contactus-button2 text-center"><a href="contact.html" class="submit">Contact Us </a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Indurial Solution-->
     <footer class="sec-padding footer-bg footer-bg3">
       <div class="container clearfix">
         <div class="row">
-          <div class="widget about-us-widget col-md-3 col-sm-6"><a href="#"><img src="logo.png" alt=""></a>
-            <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim.</p><a href="about.html">Read More <i class="fa fa-angle-double-right"></i></a>
-            <ul class="nav">
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
-              <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-            </ul>
+          <div class="widget about-us-widget col-md-4 col-sm-6"><a href="/<%= lang.currentLang %> "><img src="/assets/logo.png" alt=""></a>
           </div>
-          <div class="widget widget-links col-md-3 col-sm-6">
-            <h4 class="widget_title">Our Solutions</h4>
+          <div class="widget widget-links col-md-4 col-sm-6">
+            <h4 class="widget_title"><%= lang.homePage.quickLinks %> </h4>
             <div class="widget-contact-list row m0">
               <ul>
-                <li><a href="meterial.html">- Metal Industry</a></li>
-                <li><a href="agricultural.html">- Agricultural Engineering</a></li>
-                <li><a href="mechanical.html">- Alternative Energy</a></li>
-                <li><a href="chemical.html">- chemical research</a></li>
-                <li><a href="power.html">- power and energy</a></li>
-                <li><a href="oil.html">- Oil and lubricant</a></li>
+                <li><a href="/<%= lang.currentLang %>">- <%= lang.homePage.home %></a></li>
+                <li><a href="/contact/<%= lang.currentLang %>">- <%= lang.homePage.contactUs %></a></li>
+                <li><a href="https://www.facebook.com/assanea" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
               </ul>
             </div>
           </div>
-          <div class="widget widget-links col-md-3 col-sm-6">
-            <h4 class="widget_title">Quick Links</h4>
+          <div class="widget widget-contact col-md-4 col-sm-6">
+            <h4 class="widget_title"><%= lang.homePage.getInTouch %></h4>
             <div class="widget-contact-list row m0">
               <ul>
-                <li><a href="about.html">- About Us</a></li>
-                <li><a href="#">- Career</a></li>
-                <li><a href="#">- Get Quote</a></li>
-                <li><a href="news.html">- News</a></li>
-                <li><a href="faq.html">- Faq</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="widget widget-contact col-md-3 col-sm-6">
-            <h4 class="widget_title">Get in Touch</h4>
-            <div class="widget-contact-list row m0">
-              <ul>
-                <li><i class="fa fa-map-marker"></i>
-                  <div class="fleft location_address">Lorance 542B, Tailstoi Town 5248 MT, Wordwide Country</div>
+                <li><i class="fas fa-map-marker"></i>
+                  <div class="fleft location_address" style="padding-top: 21px;"> <%= lang.contactPage.address %> - <%= lang.contactPage.city %></br> </br></div>
                 </li>
-                <li><i class="fa fa-phone"></i>
-                  <div class="fleft contact_no"><a href="#">01865 524 8503</a></div>
+                <li><i class="fas fa-phone"></i>
+                  <div class="fleft contact_no"><a href="#"></a><%= lang.contactPage.phone %></div>
                 </li>
                 <li><i style="margin-top: 15px;" class="fas fa-envelope"></i>
-                  <div class="fleft contact_mail"><a href="mailto:info@woodworkshop.com">info@woodworkshop.com</a></div>
+                  <div class="fleft contact_mail"><a href="mailto:<%= lang.contactPage.alsanaEmail %>"><%= lang.contactPage.alsanaEmail %></a></div>
                 </li>
                 <li><i class="icon icon-Timer"></i>
-                  <div class="fleft service_time">Mon - Sat : 9am to 6pm</div>
+                  <div class="fleft service_time" style="padding-top: 21px;"><%= lang.contactPage.worksTime %></div>
                 </li>
               </ul>
             </div>
@@ -396,22 +350,6 @@
         </div>
       </div>
     </footer>
-    <section class="footer-t-bottom footer-bottom footer-bottom3">
-      <div class="container clearfix">
-        <div class="pull-left fo-txt">
-          <p>Copyright © Industiral 2016.. All rights reserved.</p>
-        </div>
-      </div>
-    </section>
-    <div class="search_overlay"><a href="javascript:void(0)" class="close_search"></a>
-      <div class="search_main_container">
-        <h4>Search</h4>
-        <form>
-          <input placeholder="Search..." type="text" class="search_lightbox_input">
-          <button type="submit"><i class="icon icon-Search"></i></button>
-        </form>
-      </div>
-    </div>
 
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -431,10 +369,6 @@
     <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
     <script src="js/search.js"></script>
     <script src="js/theme.js"></script>
-
-    <script>
-        $( "i" ).removeClass( "fa" ).addClass( "fas" );
-    </script>
   </body>
 
 </html>

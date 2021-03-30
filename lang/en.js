@@ -1,4 +1,6 @@
 module.exports = {
     currentLang: 'en',
-    apple: "apple"
+    homePage: {
+        home: 'Home'
+    }
 }

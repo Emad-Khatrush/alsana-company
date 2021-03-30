@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- reponsive meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Industrial || Responsive BootStrap HTML 5 Template</title>
+    <title> <%= lang.projectPage.project %> </title>
     <!-- Bootstrap-->
-    <script src="https://kit.fontawesome.com/4163cc19b6.js" crossorigin="anonymous"></script>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- animate css-->
     <link rel="stylesheet" href="/css/animate.min.css">
@@ -21,14 +20,14 @@
     <!-- Main Css-->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
-
+    <script src="https://kit.fontawesome.com/4163cc19b6.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header id="header">
       <!-- Logo Section-->
       <div class="container">
         <div class="row pad-logo logo-wrapper">
-          <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 t-logo"><a href="index-2.html"><img src="/assets/logo.png" alt="logo" class="img-responsive"></a></div>
+          <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 t-logo"><a href="/<%= lang.currentLang %> "><img src="/assets/logo.png" alt="logo" class="img-responsive"></a></div>
           <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 text-right">
             <div class="top-two-right">
               <div class="top-panel">
@@ -38,7 +37,12 @@
                       <div class="media">
                         <div class="blue-color media-left"><a href="#"><i class="icon icon-Phone2"></i></a></div>
                         <div class="media-body">
-                          <p>+ (1800) 456 7890<br><span><a href="mailto:info@industrial.com">info@industrial.com</a></span></p>
+                          <p> <%= lang.contactPage.phone %> 
+                            <br>
+                            <span>
+                              <a href="mailto:<%= lang.contactPage.alsanaEmail %>"><%= lang.contactPage.alsanaEmail %></a>
+                            </span>
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -46,7 +50,7 @@
                       <div class="media">
                         <div class="blue-color media-left"><a href="#"><i class="icon icon-Pointer"></i></a></div>
                         <div class="media-body">
-                          <p>13005 Greenville Avenue<br><span>California, TX 70240</span></p>
+                          <p> <%= lang.contactPage.address %> <br><span><%= lang.contactPage.city %></span></p>
                         </div>
                       </div>
                     </li>
@@ -57,6 +61,8 @@
           </div>
         </div>
       </div>
+      <!-- Logo Section end-->
+
       <!-- Main Navigation-->
       <div class="main_menu menu_fixed nav-home-three">
         <div class="container">
@@ -72,9 +78,8 @@
                   </div>
                   <div class="nav-t-footer">
                     <ul class="nav">
-                      <li><a href="index-2.html">Home</a></li>
-                      <li><a href="projects.html">Projects</a>
-                      <li><a href="contact.html">contact us</a></li>
+                      <li><a href="/<%= lang.currentLang %>"><%= lang.homePage.home %></a></li>
+                      <li><a href="/contact/<%= lang.currentLang %> "><%= lang.homePage.contactUs %></a></li>
                     </ul>
                   </div>
                 </div>
@@ -88,7 +93,7 @@
     <!-- Inner Header-->
     <section class="inner-banner2 clearfix">
       <div class="container clearfix">
-        <h2>Projects</h2>
+        <h2> <%= lang.projectPage.project %> </h2>
       </div>
     </section>
     <!-- Projects  Details-->
@@ -98,24 +103,24 @@
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  <% currentProject.img.forEach((imgUrl, index) => { %>
+                    <li data-target="#carousel-example-generic" data-slide-to="<%= index %> " class="<%= index === 0 ? 'active': null %>"></li>
+                    <% }); %> 
                 </ol>
               
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active">
-                    <img src="/images/projects/pro-de-img1.jpg" >
+                  <% currentProject.img.forEach((imgUrl, index) => { %>
+                    <% if(index != 0){ %> 
+                  <div class="item <%= index === 1 ? 'active': null %>">
+                    <img src="<%= imgUrl %>" >
                   </div>
-                  <div class="item">
-                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/CviO5r3seXU">
-                    </iframe>
-                  </div>
+                  <% } %> 
+                  <% }); %> 
 
                 </div>
-              
-                <!-- Controls -->
+                <% if (currentProject.img.length > 2) { %>
+                  <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="height: 50%; margin: auto; background: rgba(0,0,0,0.05);">
                   <span class="icon-prev" style="font-size: 50px;" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
@@ -124,23 +129,26 @@
                   <span class="icon-next" style="font-size: 50px;"></span>
                   <span class="sr-only">Next</span>
                 </a>
+                <% }  %> 
               </div>
         </div>
         <div class="pro-content clearfix">
           <h1> <%= currentProject.title %>  </h1>
-          <h4>Project Desciption</h4>
-          <p> <%= currentProject.description %>  </p>
+          <% if (currentProject.description) { %>
+            <h4><%= lang.projectPage.projectDesc %></h4>
+            <p> <%- currentProject.description %>  </p>
+          <% } %>
         </div>
         <div class="projects_hours clearfix">
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <p>Project Starting Date<span>12.01.2016</span></p>
+              <p><%= lang.projectPage.startingDate %><span><%= currentProject.year %> </span></p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <p>Project End<span>In Progress</span></p>
+              <p><%= lang.projectPage.projectStatus %><span><%= lang.projectPage.finish %></span></p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <p>Category<span>Resarch</span></p>
+              <p><%= lang.projectPage.category %><span><%= lang.projectPage.categoryProject %></span></p>
             </div>
           </div>
         </div>
@@ -151,32 +159,33 @@
     <footer class="sec-padding footer-bg footer-bg3">
       <div class="container clearfix">
         <div class="row">
-          <div class="widget about-us-widget col-md-4 col-sm-6"><a href="#"><img src="/assets/logo.png" alt=""></a>
+          <div class="widget about-us-widget col-md-4 col-sm-6"><a href="/<%= lang.currentLang %> "><img src="/assets/logo.png" alt=""></a>
           </div>
           <div class="widget widget-links col-md-4 col-sm-6">
-            <h4 class="widget_title">Quick Links</h4>
+            <h4 class="widget_title"><%= lang.homePage.quickLinks %> </h4>
             <div class="widget-contact-list row m0">
               <ul>
-                <li><a href="/">- Home</a></li>
-                <li><a href="/contact">- Contact Us</a></li>
+                <li><a href="/<%= lang.currentLang %>">- <%= lang.homePage.home %></a></li>
+                <li><a href="/contact/<%= lang.currentLang %>">- <%= lang.homePage.contactUs %></a></li>
+                <li><a href="https://www.facebook.com/assanea" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
               </ul>
             </div>
           </div>
           <div class="widget widget-contact col-md-4 col-sm-6">
-            <h4 class="widget_title">Get in Touch</h4>
+            <h4 class="widget_title"><%= lang.homePage.getInTouch %></h4>
             <div class="widget-contact-list row m0">
               <ul>
                 <li><i class="fas fa-map-marker"></i>
-                  <div class="fleft location_address">Lorance 542B, Tailstoi Town 5248 MT, Wordwide Country</div>
+                  <div class="fleft location_address" style="padding-top: 21px;"> <%= lang.contactPage.address %> - <%= lang.contactPage.city %></br> </br></div>
                 </li>
                 <li><i class="fas fa-phone"></i>
-                  <div class="fleft contact_no"><a href="#">01865 524 8503</a></div>
+                  <div class="fleft contact_no"><a href="#"></a><%= lang.contactPage.phone %></div>
                 </li>
                 <li><i style="margin-top: 15px;" class="fas fa-envelope"></i>
-                  <div class="fleft contact_mail"><a href="mailto:info@woodworkshop.com">info@woodworkshop.com</a></div>
+                  <div class="fleft contact_mail"><a href="mailto:<%= lang.contactPage.alsanaEmail %>"><%= lang.contactPage.alsanaEmail %></a></div>
                 </li>
                 <li><i class="icon icon-Timer"></i>
-                  <div class="fleft service_time">Mon - Sat : 9am to 6pm</div>
+                  <div class="fleft service_time" style="padding-top: 21px;"><%= lang.contactPage.worksTime %></div>
                 </li>
               </ul>
             </div>
@@ -202,9 +211,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
     <script src="/js/gmaps.min.js"></script>
     <script src="/js/theme.js"></script>
-
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="17DgdMWl"></script>
     <script>
-        $( "i" ).removeClass( "fa" ).addClass( "fas" );
         $('.carousel').carousel({
   interval: null
 })
