@@ -326,12 +326,7 @@ body {
     font: 300 1em/1em "Open Sans", sans-serif;
     color: #6e6e6e;
 }
-.wel-band-bg {
-    background: url("../images/header-top-band/head-top-band1.png") no-repeat center center;
-    overflow: hidden;
-    padding: 1.075em 0;
-    background-size: cover;
-}
+
 .wel-band-bg p {
     font: 400 1.1em/1em "Open Sans", sans-serif;
     margin: 0;
@@ -5833,7 +5828,7 @@ blockquote footer a {
     color: #fff;
 }
 .latest-news1 {
-    background: url("../images/latest-news/news-bg.jpg") no-repeat scroll center 0;
+    background: url("assets/news-bg.jpg") no-repeat scroll center 0;
     -webkit-background-size: cover;
     background-size: cover;
 }
