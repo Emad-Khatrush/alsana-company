@@ -80,6 +80,15 @@
                     <ul class="nav">
                       <li><a href="/<%= lang.currentLang %>"><%= lang.homePage.home %></a></li>
                       <li><a href="/contact/<%= lang.currentLang %> "><%= lang.homePage.contactUs %></a></li>
+                      <li style="text-align: center;">
+                        <a href="/project/<%= currentProject.id %>/<%= lang.currentLang === 'en' ? 'ar' : 'en' %>"> 
+                          <% if(lang.currentLang === 'en'){ %>
+                          <img width="45px" height="45px" src="/assets/libya.png" /> Arabic 
+                         <% }else{ %>
+                          <img width="45px" height="45px" src="/assets/united-kingdom.png" /> English
+                         <% } %> 
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>

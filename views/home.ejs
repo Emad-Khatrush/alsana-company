@@ -54,6 +54,15 @@
                       
                       <li class=""><a href="#projects"><%= lang.homePage.projects %></a></li>
                       <li><a href="/contact/<%= lang.currentLang %>"><%= lang.homePage.contactUs %></a></li>
+                      <li style="text-align: center;">
+                        <a href="/<%= lang.currentLang === 'en' ? 'ar' : 'en' %>"> 
+                          <% if(lang.currentLang === 'en'){ %>
+                          <img width="45px" height="45px" src="assets/libya.png" /> Arabic 
+                         <% }else{ %>
+                          <img width="45px" height="45px" src="assets/united-kingdom.png" /> English
+                         <% } %> 
+                        </a>
+                      </li>
                       <a></a>
                     </ul>
                   </div>
@@ -73,8 +82,8 @@
               <div class="thm-container txt-left">
                 <div class="box valign-bottom">
                   <div class="content text-left">
-                    <p data-animation="animated fadeInDown" style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.alsanaSuccess %> </p>
-                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50"> <%= lang.homePage.technicians %> <%= lang.homePage.professional %> <span class="color3"><%= lang.homePage.certified %></span></h1>
+                    <p data-animation="animated fadeInDown" style="font-size: 2.5rem "><%= lang.homePage.alsanaSuccess %> </p>
+                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50" style="font-size: <%= lang.currentLang === 'en' ? `50px` : `60px` %>"> <%= lang.homePage.technicians %> <%= lang.homePage.professional %> <span class="color3"><%= lang.homePage.certified %></span></h1>
                     <a data-animation="animated fadeInUp" href="#services" class="view-all hvr-bounce-to-right slide_learn_btn btn"><%= lang.homePage.ourServices %></a>
                   </div>
                 </div>
@@ -87,7 +96,7 @@
                 <div class="box valign-bottom">
                   <div class="content text-center">
                     <p data-animation="animated fadeInDown" style="font-size: 3rem; font-weight: bold;"><%= lang.homePage.alsanaSuccess %> </p>
-                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50"> <%= lang.homePage.leader %> <br><%= lang.homePage.manufacturing %> <span class="color3"><%= lang.homePage.buildings %></span></h1>
+                    <h1 data-animation="animated fadeInLeft" class="bnrfnt50" style="font-size: <%= lang.currentLang === 'en' ? `40px` : `60px` %>"> <%= lang.homePage.leader %> <br><%= lang.homePage.manufacturing %> <span class="color3"><%= lang.homePage.buildings %></span></h1>
                   </div>
                 </div>
               </div>
@@ -115,14 +124,17 @@
     <!-- =========top navigation end============-->
     <ul class="banner_btm_list">
       <li class="lytblue_prd_bg"><img src="assets/icon-1.png" alt="">
-        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.expertEngineers %> </h4>
+        <h4 style="font-size: <%= lang.currentLang === 'en' ? `1.6rem` : `1.7rem` %>; font-weight: bold;"><%= lang.homePage.expertEngineers %> </h4>
         <p style="font-size: 1.7rem;" ><%= lang.homePage.expertEngineersDesc %></p>
+        <% if(lang.currentLang === 'en'){ %>
+        </br>
+        <% } %> 
       </li>
       <li class="blue_prd_bg"><img src="assets/icon-2.png" alt="">
-        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.qualityservices %></h4>
+        <h4 style="font-size: <%= lang.currentLang === 'en' ? `1.6rem` : `1.7rem` %>; font-weight: bold;"><%= lang.homePage.qualityservices %></h4>
         <p style="font-size: 1.7rem;" ><%= lang.homePage.qualityservicesDesc %></p>      </li>
       <li class="yellow_prd_bg"><img src="assets/icon-3.png" alt="">
-        <h4 style="font-size: 2.5rem; font-weight: bold;"><%= lang.homePage.modernEquipments %></h4>
+        <h4 style="font-size: <%= lang.currentLang === 'en' ? `1.6rem` : `1.7rem` %>; font-weight: bold;"><%= lang.homePage.modernEquipments %></h4>
         <p style="font-size: 1.7rem; color: white;" ><%= lang.homePage.modernEquipmentsDesc %></p>      </li>
     </ul>
     <!-- Control in compliance-->
@@ -164,6 +176,9 @@
                 <div class="caption">
                   <h2><%= lang.homePage.hangersProduction %> </h2>
                   <p><%= lang.homePage.hangerDesc %> </p>
+                 <% if(lang.currentLang === 'en'){ %>
+                 </br>
+                 <% } %> 
                 </div>
               </div>
             </div>
@@ -181,6 +196,9 @@
                 <div class="caption">
                   <h2><%= lang.homePage.saharij2 %></h2>
                   <p style="font-size: 1.405rem;"><%= lang.homePage.saharij2Desc %></p>
+                  <% if(lang.currentLang === 'en'){ %>
+                  </br>
+                  <% } %> 
                 </div>
               </div>
             </div>
@@ -189,6 +207,9 @@
                 <div class="caption">
                   <h2><%= lang.homePage.campo %></h2>
                   <p style="font-size: 1.35rem;"><%= lang.homePage.campoDesc %></p>
+                  <% if(lang.currentLang === 'en'){ %>
+                  </br>
+                  <% } %> 
                 </div>
               </div>
             </div>
@@ -197,6 +218,9 @@
                 <div class="caption">
                   <h2><%= lang.homePage.beds %></h2>
                   <p><%= lang.homePage.bedsDesc %></p>
+                  <% if(lang.currentLang === 'en'){ %>
+                  </br>
+                  <% } %> 
                 </div>
               </div>
             </div>
@@ -205,6 +229,9 @@
                 <div class="caption">
                   <h2><%= lang.homePage.dolap %></h2>
                   <p><%= lang.homePage.dolapDesc %></p>
+                  <% if(lang.currentLang === 'en'){ %>
+                  </br>
+                  <% } %> 
                 </div>
               </div>
             </div>
