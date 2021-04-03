@@ -55,7 +55,7 @@ module.exports = {
         question3: 'How to calculate the prices of services in the Al Sanea company?',
         answer1: 'Al-Sana Company is distinguished in the field of manufacturing pre-fabricated buildings such as hangars, mobile tanks, production of beds, cabinets and cupboards production, etc.',
         answer2: 'Al-Sana Company provides its services to all Libyan cities without exception',
-        answer3: 'The prices of our services are calculated according to the clients requirements, and his calculation is in meters'
+        answer3: 'The prices of our services are calculated according to the clients requirements, and it is calculated in m2'
     },
     contactPage: {
         phone: '+218 91-2104152',

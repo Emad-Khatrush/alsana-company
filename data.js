@@ -45,11 +45,63 @@ const dataEn = [{
 },
 {
     id: "6",
-    img: ["/assets/img/project6/1.jpg","/assets/img/project6/1.png", "/assets/img/project6/2.png", "/assets/img/project6/3.png",
-    "/assets/img/project6/4.png", "/assets/img/project6/5.png"],
+    img: ["/assets/img/project6/1.jpg"],
     title: "Hangers Tripoli",
     description: null,
-    year: "2021"
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/OgCqRdB5AV4"
+},
+{
+    id: "7",
+    img: ["/assets/img/video-1.png"],
+    title: "Hangers Tripoli",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/me3vmh5buKM",
+    status: "Under construction"
+},
+{
+    id: "8",
+    img: ["/assets/img/video-2.png"],
+    title: "Hangers Tripoli",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/zSWfX83otQA"
+},
+{
+    id: "9",
+    img: ["/assets/img/video-3.png"],
+    title: "Hangers Tripoli",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/E8N-lV5-urU"
+},
+{
+    id: "10",
+    img: ["/assets/img/video-4.png"],
+    title: "Hangers Tripoli",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/JFkSASES688",
+    status: "Under construction"
+},
+{
+    id: "11",
+    img: ["/assets/img/video-5.png"],
+    title: "Hangers Tripoli",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/A82ePVj6NE4",
+    status: "Under construction"
+},
+{
+    id: "12",
+    img: ["/assets/img/video-6.png"],
+    title: "Hangers Misurata",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/c7N0udrB0NE",
+    status: "Under construction"
 }];
 const dataAr = [{
     id: "1",
@@ -98,11 +150,63 @@ const dataAr = [{
 },
 {
     id: "6",
-    img: ["/assets/img/project6/1.jpg","/assets/img/project6/1.png", "/assets/img/project6/2.png", "/assets/img/project6/3.png",
-    "/assets/img/project6/4.png", "/assets/img/project6/5.png"],
+    img: ["/assets/img/project6/1.jpg"],
     title: "هناقر طرابلس - وادي الربيع",
     description: null,
-    year: "2021"
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/OgCqRdB5AV4"
+},
+{
+    id: "7",
+    img: ["/assets/img/video-1.png"],
+    title: "هناقر طرابلس",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/me3vmh5buKM",
+    status: "قيد الانشاء"
+},
+{
+    id: "8",
+    img: ["/assets/img/video-2.png"],
+    title: "هناقر طرابلس",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/zSWfX83otQA"
+},
+{
+    id: "9",
+    img: ["/assets/img/video-3.png"],
+    title: "هناقر طرابلس",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/E8N-lV5-urU"
+},
+{
+    id: "10",
+    img: ["/assets/img/video-4.png"],
+    title: "هناقر طرابلس",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/JFkSASES688",
+    status: "قيد الانشاء"
+},
+{
+    id: "11",
+    img: ["/assets/img/video-5.png"],
+    title: "هناقر طرابلس",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/A82ePVj6NE4",
+    status: "قيد الانشاء"
+},
+{
+    id: "12",
+    img: ["/assets/img/video-6.png"],
+    title: "هناقر مصراتة",
+    description: null,
+    year: "2021",
+    videoLink: "https://www.youtube.com/embed/c7N0udrB0NE",
+    status: "قيد الانشاء"
 }];
 const translateData = (lang) => {
     if(lang === 'ar'){

@@ -67,7 +67,7 @@ module.exports = {
         email: 'البريد الاكتروني',
         subject: 'موضوع',
         message: 'رسالة',
-        worksTime: 'السبت - الخميس : 9 صباحا الى 5 مساءا',
+        worksTime: 'من السبت الى الخميس : 9 صباحا الى 5 مساءا',
         alsanaEmail: 'al.abd27@gmail.com',
         successMessage: 'تم ارسال الرسالة بنجاح',
         errorMessage: 'حدث خطا اثناء ارسال الرسالة، الرجاء المحاولة مرة اخرى'

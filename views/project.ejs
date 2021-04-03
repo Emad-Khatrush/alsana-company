@@ -119,6 +119,11 @@
               
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
+                  <% if(currentProject.videoLink) { %>
+                    <iframe width="100%" height="500px" src="<%= currentProject.videoLink %> " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                  <% } %> 
+                  
                   <% currentProject.img.forEach((imgUrl, index) => { %>
                     <% if(index != 0){ %> 
                   <div class="item <%= index === 1 ? 'active': null %>">
@@ -154,7 +159,7 @@
               <p><%= lang.projectPage.startingDate %><span><%= currentProject.year %> </span></p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <p><%= lang.projectPage.projectStatus %><span><%= lang.projectPage.finish %></span></p>
+              <p><%= lang.projectPage.projectStatus %><span> <%= currentProject.status ?  currentProject.status : lang.projectPage.finish %></span></p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
               <p><%= lang.projectPage.category %><span><%= lang.projectPage.categoryProject %></span></p>
