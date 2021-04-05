@@ -105,6 +105,20 @@
     </section>
     <!-- Contact us Page-->
     <section class="core-projects touch">
+      <!-- flash messages -->
+      <div class="container">
+        <% if(error && error.length > 0){ %>
+        <div style="margin-top: 10px;" class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+      <% if(success && success.length > 0){ %>
+        <div style="margin-top: 10px;" class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+        <% } %>
+      </div>
+<!-- flash messages end-->
       <div class="sectpad touch_bg">
         <div class="container clearfix">
           <h1><%= lang.contactPage.contactForm %> </h1>
@@ -134,13 +148,13 @@
               </div>
             </div>
             <div class="col-md-8 input_form">
-              <form id="contactForm" action="http://galaxyanalytics.net/demos/industrial/contact_process.php" method="post">
+              <form  action="/contact/<%= lang.currentLang %>" method="post">
                 <input id="name" type="text" name="name" placeholder="<%= lang.contactPage.name %>" class="form-control">
                 <input id="email" type="email" name="email" placeholder="<%= lang.contactPage.email %>" class="form-control">
                 <input id="subject" type="text" name="subject" placeholder="<%= lang.contactPage.subject %>" class="form-control">
                 <textarea id="message" rows="6" name="message" placeholder="<%= lang.contactPage.message %>" class="form-control"></textarea>
                 <div class="row m0">
-                  <button type="submit" class="btn btn-default submit"><%= lang.contactPage.submit %> </button>
+                  <button type="submit" ><%= lang.contactPage.submit %> </button>
                 </div>
               </form>
               <div id="success">

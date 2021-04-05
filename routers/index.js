@@ -3,6 +3,7 @@ const express = require("express"),
 const langAR  = require("../lang/ar");
 const langEN  = require("../lang/en");
 const projects = require("../data");
+const nodemailer = require('nodemailer');
 
 // home route
 router.get("/", (req,res) => {
@@ -38,6 +39,38 @@ router.get('/contact/:lang', ( req, res ) => {
         return res.render('contact', { lang: langAR });
     }
 });
+// Contact Route: POST
+router.post("/contact/:lang", function(req,res){
+      var transporter = nodemailer.createTransport({
+      service: 'hotmail',
+      auth: {
+        user: 'expotimbuildinglibya@hotmail.com',
+        pass: process.env.HOTMAIL_PASS
+        }
+      });
+  
+      var mailOptions = {
+        from: 'expotimbuildinglibya@hotmail.com',
+        to: 'al.abd27@gmail.com',
+        subject: req.body.subject,
+        html: `<h3> Message from ${req.body.name}</h3> <br>
+        <p><strong> Full Name:</strong> ${req.body.name || "Empty"} </p>
+        <p><strong> Email: </strong>${req.body.email || "Empty"} </p>
+        <p><strong> Message:</strong> ${req.body.message} </p>`
+      };
+  
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+          req.flash("error", error.message);
+          res.redirect("/contact/" + req.params.lang);
+        } else {
+          console.log('Email sent: ' + info.response);
+          req.flash("success", ".تم ارسال الرسالة بنجاح");
+          res.redirect("/contact/" + req.params.lang);
+        }
+      });
+  });
 
 // home lang route
 router.get("/:lang", (req,res) => {
