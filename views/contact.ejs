@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- reponsive meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= lang.homePage.contactUs %></title>
+    <title><%= lang.homePage.contactUsPage %></title>
     <!-- Bootstrap-->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- animate css-->
@@ -149,10 +149,10 @@
             </div>
             <div class="col-md-8 input_form">
               <form  action="/contact/<%= lang.currentLang %>" method="post">
-                <input id="name" type="text" name="name" placeholder="<%= lang.contactPage.name %>" class="form-control">
-                <input id="email" type="email" name="email" placeholder="<%= lang.contactPage.email %>" class="form-control">
-                <input id="subject" type="text" name="subject" placeholder="<%= lang.contactPage.subject %>" class="form-control">
-                <textarea id="message" rows="6" name="message" placeholder="<%= lang.contactPage.message %>" class="form-control"></textarea>
+                <input required id="name" type="text" name="name" placeholder="<%= lang.contactPage.name %>" class="form-control">
+                <input required id="email" type="email" name="email" placeholder="<%= lang.contactPage.email %>" class="form-control">
+                <input required id="subject" type="text" name="subject" placeholder="<%= lang.contactPage.subject %>" class="form-control">
+                <textarea required id="message" rows="6" name="message" placeholder="<%= lang.contactPage.message %>" class="form-control"></textarea>
                 <div class="row m0">
                   <button type="submit" ><%= lang.contactPage.submit %> </button>
                 </div>

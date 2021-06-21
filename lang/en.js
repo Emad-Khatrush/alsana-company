@@ -1,9 +1,12 @@
 module.exports = {
     currentLang: 'en',
     homePage: {
+        titlePage: 'Alsana Company For Metal Industries - Home Page',
         home: 'Home',
+        pageDesc: 'Al-Sana Company for Metal Industries is one of the leading companies in Libya in the field of manufacturing pre-fabricated buildings "Trailers and hangers", maintaining and developing them according to the customers need in accordance with the best engineering specifications that are in line with the customers request in addition to supplying and installing all kinds of hangers as needed and with specifications that suit its use as a workshop or Store or market also provide you: Fuel tanks Water reservoirs Metal umbrellas Hanger of various types in terms of size, use and features Trials of various types in terms of size, use and features General metal artifacts such as doors, windows, protection and fences',
         projects: 'Projects',
         contactUs: 'Contact Us',
+        contactUsPage: 'Alsana Company For Metal Industries - Contact Us',
         alsanaSuccess: '- 18 years of success -',
         professional: '& CERTIFIED',
         certified: 'TECHNICIANS',
@@ -68,7 +71,7 @@ module.exports = {
         subject: 'Subject',
         message: 'Message',
         worksTime: 'Sat - Thu : 9am to 5pm',
-        alsanaEmail: 'al.abd27@gmail.com',
+        alsanaEmail: 'info@alanalibya.com',
         successMessage: 'The message has been sent successfully',
         errorMessage: 'An error occurred while sending the message, please try again'
     },
